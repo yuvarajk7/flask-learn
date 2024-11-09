@@ -1,0 +1,16 @@
+parameters:
+  - name: book_id
+    in: path
+    required: true
+    description: ID of the book to retrieve
+    schema:
+      type: integer
+responses:
+  204:
+    description: Book deleted successfully
+  404:
+    description: Book not found
+    content:
+      application/json:
+        example:
+          message: Book not found

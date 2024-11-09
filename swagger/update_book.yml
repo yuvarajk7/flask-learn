@@ -1,0 +1,33 @@
+parameters:
+  - name: book_id
+    in: path
+    required: true
+    description: ID of the book to update
+    schema:
+      type: integer
+  - name: body
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - title
+      properties:
+        title:
+          type: string
+          example: Advanced Python Programming
+responses:
+  200:
+    description: Book updated successfully
+    content:
+      application/json:
+        example:
+          id: 1
+          title: Advanced Python Programming
+          author: Author Name
+  404:
+    description: Book not found
+    content:
+      application/json:
+        example:
+          message: Book not found

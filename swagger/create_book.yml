@@ -1,0 +1,29 @@
+responses:
+  201:
+    description: Book created successfully
+    content:
+      application/json:
+        example:
+          id: 1
+          title: Python Programming
+          author: Author Name
+parameters:
+  - name: body
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - id
+        - title
+        - author
+      properties:
+        id:
+          type: integer
+          example: 1
+        title:
+          type: string
+          example: Python Programming
+        author:
+          type: string
+          example: Author Name

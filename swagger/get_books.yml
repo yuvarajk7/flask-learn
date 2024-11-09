@@ -1,0 +1,9 @@
+responses:
+  200:
+    description: A list of books
+    content:
+      application/json:
+        example:
+          - id: 1
+            title: Python Programming
+            author: Author Name
